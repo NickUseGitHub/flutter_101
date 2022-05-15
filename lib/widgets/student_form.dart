@@ -156,14 +156,14 @@ class _StudentFormState extends State<StudentForm> {
               students.editStudent(
                 StudentModel(
                   id: widget.student!.id,
-                  name: widget.student!.name,
-                  age: widget.student!.age,
+                  name: nameController.text,
+                  age: int.tryParse(ageController.text) ?? 0,
                 ),
               );
             } else {
               students.addStudent(
                 StudentModel(
-                  id: DateTime.now().toIso8601String(),
+                  id: DateTime.now().millisecondsSinceEpoch.toString(),
                   name: nameController.text,
                   age: int.tryParse(ageController.text) ?? 0,
                 ),

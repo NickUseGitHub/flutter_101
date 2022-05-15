@@ -17,10 +17,12 @@ class StudentsListModel extends ChangeNotifier {
 
     if (index != -1) {
       students[index] = StudentModel(
-        id: editedStudent.id,
+        id: students[index].id,
         name: editedStudent.name,
         age: editedStudent.age,
       );
+
+      notifyListeners();
     }
   }
 
