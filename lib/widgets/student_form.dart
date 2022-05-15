@@ -175,7 +175,7 @@ class _StudentFormState extends State<StudentForm> {
           child: Text(
             isEditing ? 'แก้ไข' : 'เพิ่ม',
             style: const TextStyle(
-              color: Colors.white,
+              color: Color.fromARGB(255, 31, 126, 203),
               fontWeight: FontWeight.w900,
             ),
           ),
